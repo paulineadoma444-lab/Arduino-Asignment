@@ -1,33 +1,39 @@
-# Arduino-Asignment 1 -Smart Countdown
+# Arduino-Asignment 2 -Beeping Countdown
 
-This is my submission for Assignment 1 in the
+This is my submission for Assignment 2 in the
 Programmming C++ for Engineers Using Arduino course
 at Ghana Communiation Technology University.
 
 
-## what this program does
+## what this project does
 
-It  counts down from 5 to 1 using a while loop. On each step:
--It prints "Count: N" to the Serial Monitor.
--It blinks the on-board LED N times using a function called flashLED().
+A 7-segment display counts from 9 to 0. On each step, a passive buzzer plays a short beep. When the countdown reaches 0, the buzzer plays a longer tone to signal compltion.
 
-When the countdown finishes , it prints "=== Countdown Complete===".
-
+## Hardware used
+ 
+-Arduino Uno
+-1 * passive buzzer (piezo)
+-1 * single-digit 7 segment diplay (common cathode)
+-1 * 220 ohm resistor (on the COM pin)
+- Breadboard and jumper wires 
 
 ## Concepts demonstrated 
 
--Variables (int)
--Functions with parameters (flashLED)
--The while loop
--Digital output (digitalWrite, pinMode)
-- The Serial Monitor (Serial.begin, Serial.print, Serial.println)
+- The tone () and noTone() functions
+- Passive vs active buzzers
+- 7-segment display wiring (common cathode)
+- 2D arrays for digit patterns (lookup table)
+- while and for loops
+- Serial Monitor output
 
 ## How to run it
 
-1.Open the .ino file in the Arduino IDE.
-2.Connect an Arduino Uno via USB.
-3.Select Tools > Board > Arduino Uno and the correct Port.
-4.Click Upload , then on Tools > Serial Monitor (9600)
+1.Wire the buzzerto pin 8.
+2.Wire the 7-segment segments a-g to Arduino pins 2, 3, 4, 5, 6, 7, 9 (direct wires, no resistors).
+3.Connect the COM pin of the display to GND via a 22 ohm resistor. 
+4.Open the .ino file in the Arduino IDE.
+5.Select Tools > Board > Arduino Uno and the correct Port.
+6.Click Upload.
 
 ## Author
 Ofori Pauline Adoma-2526403123
